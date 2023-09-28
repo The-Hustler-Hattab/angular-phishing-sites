@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { PageRoutingService } from 'src/app/services/page-routing.service';
 
 @Component({
   selector: 'app-google',
@@ -8,6 +9,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class GoogleComponent {
   isPasswordReady: boolean = false; // Set this to true or false based on your condition
 
+  constructor(private pageRouting: PageRoutingService ){}
   
   @ViewChild('emailInput')
   emailInput!: ElementRef;
@@ -36,7 +38,9 @@ export class GoogleComponent {
     }
 
     
-
+    if (this.isPasswordReady) {
+      this.pageRouting.navigateToPawned()
+    }
 
     this.isPasswordReady = !this.isPasswordReady;
     
