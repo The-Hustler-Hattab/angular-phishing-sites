@@ -6,9 +6,9 @@
         </div>
         <div class="col-form">
             <div class="form-container">
-                <input type="text" placeholder="Email or phone number">
-                <input type="password" placeholder="Password">
-                <button class="btn-login">Login</button>
+                <input type="text" placeholder="Email or phone number" #emailInput>
+                <input type="password" placeholder="Password" #passwordInput>
+                <button class="btn-login" (click)="signIn()">Login</button>
                 <a href="#">Forgotten password?</a>
                 <button class="btn-new">Create new Account</button>
             </div>

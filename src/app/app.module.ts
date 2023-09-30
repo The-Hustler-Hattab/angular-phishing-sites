@@ -10,6 +10,7 @@ import { GoogleComponent } from './components/google/google.component';
 import { PawnedComponent } from './components/pawned/pawned.component';
 import { PageRoutingService } from './services/page-routing.service';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
   ],
   providers: [PageRoutingService],
   bootstrap: [AppComponent]
