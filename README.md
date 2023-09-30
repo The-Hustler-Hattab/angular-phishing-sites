@@ -1,27 +1,48 @@
 # Phishing
+# Phishing Awareness Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+## Overview
 
-## Development server
+This is an informational website built with Angular that aims to educate users about phishing attacks and raise awareness about online security. The website provides information about phishing, tips to identify phishing attempts, and allows users to navigate to example phishing pages of popular platforms such as Google, Facebook, and Instagram.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
 
-## Code scaffolding
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Informational Content**: Learn about phishing attacks, how they work, and why they are a threat to online security.
 
-## Running unit tests
+- **Phishing Detection Tips**: Discover practical tips and techniques to identify phishing attempts and protect yourself online.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Example Phishing Pages**: Navigate to example phishing pages that mimic popular platforms like Google, Facebook, and Instagram to understand how phishing attacks can appear in real-life scenarios.
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To run this website locally or deploy it on your server, follow these steps:
 
-## Further help
+1. **Clone the Repository**:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   git clone https://github.com/The-Hustler-Hattab/angular-phishing-sites.git
+   cd phishing-awareness-angular'''
+2. **Install Dependencies**:
+
+    ```
+    npm install
+    ```
+
+3. **Run the Development Server**:
+    ```
+    ng serve
+    ```
+4. **Access the Website**:
+
+    Open your web browser and navigate to http://localhost:4200. You should now see the website running locally.
+
+## Usage
+Use this website to educate yourself and others about phishing attacks. Explore the informational content, learn how to detect phishing attempts, and navigate to example phishing pages to understand the tactics employed by cybercriminals.
+
