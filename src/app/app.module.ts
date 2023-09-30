@@ -11,6 +11,7 @@ import { PawnedComponent } from './components/pawned/pawned.component';
 import { PageRoutingService } from './services/page-routing.service';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutProjectComponent } from './components/about-project/about-project.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     GoogleComponent,
     PawnedComponent,
     HomeComponent,
+    AboutProjectComponent,
   ],
   imports: [
     BrowserModule,

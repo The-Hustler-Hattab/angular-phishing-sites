@@ -5,6 +5,7 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 import { GoogleComponent } from './components/google/google.component';
 import { PawnedComponent } from './components/pawned/pawned.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutProjectComponent } from './components/about-project/about-project.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: "instagram", component: InstagramComponent},
   {path: "google", component: GoogleComponent},
   {path: "pawned", component: PawnedComponent},
+  {path: "about", component: AboutProjectComponent},
 
 
 
