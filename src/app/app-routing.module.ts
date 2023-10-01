@@ -6,6 +6,7 @@ import { GoogleComponent } from './components/google/google.component';
 import { PawnedComponent } from './components/pawned/pawned.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutProjectComponent } from './components/about-project/about-project.component';
+import { ShowPawnedUsersComponent } from './components/show-pawned-users/show-pawned-users.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path: "google", component: GoogleComponent},
   {path: "pawned", component: PawnedComponent},
   {path: "about", component: AboutProjectComponent},
+  {path: "pawned-users", component: ShowPawnedUsersComponent},
+
 
 
 

@@ -1,0 +1,29 @@
+<!-- your-component.component.html -->
+<hr>
+<div class="container mt-4">
+    <h1>Table of Pawned Users</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>USERNAME</th>
+          <th>PASSWORD</th>
+          <th>SITE</th>
+          <th>TIME (UTC)</th>
+
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dynamoDbList">
+          <td>{{ item.USERNAME }}</td>
+          <td>{{ item.PASSWORD }}</td>
+          <td>{{ item.SITE }}</td>
+          <td>{{ item.TIME }}</td>
+
+          <td>
+            <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -12,6 +12,7 @@ import { PageRoutingService } from './services/page-routing.service';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutProjectComponent } from './components/about-project/about-project.component';
+import { ShowPawnedUsersComponent } from './components/show-pawned-users/show-pawned-users.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AboutProjectComponent } from './components/about-project/about-project.
     PawnedComponent,
     HomeComponent,
     AboutProjectComponent,
+    ShowPawnedUsersComponent,
   ],
   imports: [
     BrowserModule,

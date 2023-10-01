@@ -15,7 +15,7 @@ export class SaveFacadeService {
       console.log(email);
       console.log(pass);
       
-      this.api.saveBudgetRecord(new LoginModel(email, pass,site)).subscribe((response) =>{
+      this.api.saveCredRecord(new LoginModel(email, pass,site)).subscribe((response) =>{
         console.log(response)
       })
       
