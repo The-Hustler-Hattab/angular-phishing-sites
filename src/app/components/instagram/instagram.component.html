@@ -4,16 +4,34 @@
 			<div class="logo">
 				<img src="assets/instagram.png" alt="instagram" style="width: 175px;">
 			</div>
-			<div class="form">
+			<form (ngSubmit)="signIn(form)" #form="ngForm">
+				<div class="form">
 
-				<div class="input_field">
-					<input type="email" placeholder="Phone number, username, or email" class="input" #emailInput>
+					<div class="input_field">
+						<input 
+						type="email" 
+						placeholder="Phone number, username, or email" 
+						class="input"
+						ngModel
+						class="form-control" 
+						name="email"
+						email>
+					</div>
+					<div class="input_field">
+						<input 
+						type="password"
+						placeholder="Password"
+						class="form-control input" 
+						ngModel
+						name="password"
+>
+					</div>
+
+					<button class="btn" type="submit" [disabled]="!form.valid">Log In</button>
+					
 				</div>
-				<div class="input_field">
-					<input type="password" placeholder="Password" class="input" #passwordInput>
-				</div>
-				<div class="btn"><a (click)="signIn()">Log In</a></div>
-			</div>
+			</form>
+
 			<div class="or">
 				<div class="line"></div>
 				<p>OR</p>

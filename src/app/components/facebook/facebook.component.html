@@ -4,16 +4,34 @@
             <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Logo">
             <h2>Facebook helps you connect and share with the people in your life.</h2>
         </div>
-        <div class="col-form">
-            <div class="form-container">
-                <input type="text" placeholder="Email or phone number" #emailInput>
-                <input type="password" placeholder="Password" #passwordInput>
-                <button class="btn-login" (click)="signIn()">Login</button>
-                <a href="#">Forgotten password?</a>
-                <button class="btn-new">Create new Account</button>
+        <form (ngSubmit)="signIn(form)" #form="ngForm">
+            <div class="col-form">
+                <div class="form-container">
+                    <input 						
+                    type="email" 
+                    placeholder="Phone number, or email" 
+                    class="input"
+                    ngModel
+                    class="form-control" 
+                    name="email"
+                    email>
+                    <input 
+                    type="password"
+						placeholder="Password"
+						class="form-control input" 
+						ngModel
+						name="password"
+                    >
+                    <button class="btn-login" type="submit" [disabled]="!form.valid">Login</button>
+                    <a href="#">Forgotten password?</a>
+                    <button class="btn-new">Create new Account</button>
+                </div>
+                <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
             </div>
-            <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
-        </div>
+
+            
+        </form>
+
     </div>
 </main>
 <footer>

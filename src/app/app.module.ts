@@ -17,6 +17,7 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { InterceptorInterceptor } from './interceptor/interceptor.interceptor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { InterceptorInterceptor } from './interceptor/interceptor.interceptor';
     HttpClientModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
+    FormsModule
 
 
   ],
