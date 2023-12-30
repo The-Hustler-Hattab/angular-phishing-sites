@@ -10,9 +10,13 @@ import { GoogleComponent } from './components/google/google.component';
 import { PawnedComponent } from './components/pawned/pawned.component';
 import { PageRoutingService } from './services/page-routing.service';
 import { HomeComponent } from './components/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AboutProjectComponent } from './components/about-project/about-project.component';
 import { ShowPawnedUsersComponent } from './components/show-pawned-users/show-pawned-users.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { InterceptorInterceptor } from './interceptor/interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,25 @@ import { ShowPawnedUsersComponent } from './components/show-pawned-users/show-pa
     HomeComponent,
     AboutProjectComponent,
     ShowPawnedUsersComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+
 
   ],
-  providers: [PageRoutingService],
+  providers: [PageRoutingService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorInterceptor,
+      multi: true,
+    }
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
